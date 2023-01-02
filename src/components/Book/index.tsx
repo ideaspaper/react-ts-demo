@@ -6,7 +6,8 @@ type BookProps = {
   onClickHandler: (bookId: number) => void;
 };
 
-const Book: React.FC<BookProps> = ({ book, onClickHandler }: BookProps) => {
+const Book: React.FC<BookProps> = (props: BookProps) => {
+  const { book, onClickHandler } = props;
   return (
     <div>
       <h2>{book.title}</h2>
